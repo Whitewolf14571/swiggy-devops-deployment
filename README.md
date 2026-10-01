@@ -1,39 +1,232 @@
-# 🚀 **DevOps Real-time Project: Swiggy Clone App Deployment**
+# 🚀 DevOps Real-Time Project: Swiggy Clone Application Deployment
 
-In this **real-time DevOps project**, I demonstrate how to **deploy a Swiggy Clone App** using various modern tools and services in the DevOps ecosystem.
-## 🛠️ Tools & Services Used:
+## 📌 Project Overview
 
-1. **Terraform** ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
-2. **GitHub** ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-3. **Jenkins** ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
-4. **SonarQube** ![SonarQube](https://img.shields.io/badge/SonarQube-4E9BCD?style=flat-square&logo=sonarqube&logoColor=white)
-5. **OWASP** ![OWASP](https://img.shields.io/badge/OWASP-000000?style=flat-square&logo=owasp&logoColor=white)
-6. **Trivy** ![Trivy](https://img.shields.io/badge/Trivy-00979D?style=flat-square&logo=trivy&logoColor=white)
-7. **Docker & DockerHub** ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![DockerHub](https://img.shields.io/badge/DockerHub-2496ED?style=flat-square&logo=docker&logoColor=white)
+This project demonstrates the deployment of a **Swiggy Clone Application** using modern DevOps tools and practices.
+
+The project covers source-code management, CI/CD automation, containerization, infrastructure provisioning, and application security as part of an end-to-end DevOps workflow.
+
+## 🛠️ Tools & Technologies
+
+1. **Terraform**
+   Infrastructure as Code (IaC) for provisioning infrastructure.
+
+2. **GitHub**
+   Source-code management and version control.
+
+3. **Jenkins**
+   CI/CD automation for building and deploying the application.
+
+4. **SonarQube**
+   Static code analysis and code-quality checks.
+
+5. **OWASP Dependency-Check**
+   Dependency vulnerability scanning.
+
+6. **Trivy**
+   Container and security vulnerability scanning.
+
+7. **Docker & Docker Hub**
+   Containerization and container image management.
+
+## 🏗️ DevOps Workflow
+
+```text
+Developer
+   │
+   ▼
+GitHub
+   │
+   ▼
+Jenkins
+   │
+   ├── Build
+   ├── Test
+   ├── SonarQube Analysis
+   ├── OWASP Dependency Check
+   └── Trivy Security Scan
+   │
+   ▼
+Docker Image
+   │
+   ▼
+Docker Hub
+   │
+   ▼
+Deployment Infrastructure
+   │
+   ▼
+Swiggy Clone Application
+```
+
+## 📂 Project Structure
+
+```text
+Swiggy-DevOps-Project/
+│
+├── src/
+├── public/
+├── Dockerfile
+├── Jenkinsfile
+├── terraform/
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+> The exact directory structure may vary depending on the version of the project and the deployment implementation.
+
+## 🐳 Docker
+
+The application is containerized using Docker.
+
+Build the Docker image:
+
+```bash
+docker build -t swiggy-app:1.0 .
+```
+
+Run the container:
+
+```bash
+docker run -d -p 3000:3000 --name swiggy-app swiggy-app:1.0
+```
+
+Check running containers:
+
+```bash
+docker ps
+```
+
+## 🔄 CI/CD with Jenkins
+
+Jenkins is used to automate the application delivery workflow.
+
+The pipeline can include:
+
+```text
+GitHub Checkout
+      ↓
+Application Build
+      ↓
+Testing
+      ↓
+SonarQube Analysis
+      ↓
+OWASP Dependency Check
+      ↓
+Docker Build
+      ↓
+Trivy Scan
+      ↓
+Docker Image Push
+      ↓
+Deployment
+```
+
+## 🔐 Security
+
+Security tools used in the project include:
+
+### SonarQube
+
+Used for:
+
+* Static code analysis
+* Code-quality analysis
+* Identification of code issues
+
+### OWASP Dependency-Check
+
+Used to identify known vulnerabilities in application dependencies.
+
+### Trivy
+
+Used for vulnerability scanning of Docker images and other project components.
+
+## ☁️ Infrastructure with Terraform
+
+Terraform is used as Infrastructure as Code to automate infrastructure provisioning.
+
+The Terraform configuration can be used to create and manage the infrastructure required for application deployment.
+
+Example workflow:
+
+```bash
+terraform init
+terraform plan
+terraform apply
+```
+
+To remove Terraform-managed infrastructure:
+
+```bash
+terraform destroy
+```
+
+## 🚀 Deployment
+
+The application can be deployed through the automated DevOps pipeline.
+
+The overall deployment process is:
+
+```text
+Code
+ ↓
+GitHub
+ ↓
+Jenkins
+ ↓
+Build & Test
+ ↓
+Security Checks
+ ↓
+Docker Image
+ ↓
+Container Registry
+ ↓
+Infrastructure
+ ↓
+Application Deployment
+```
+
+## 👨‍💻 Author
+
+**Pankaj Bisht**
+
+### GitHub
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square\&logo=github\&logoColor=white)](https://github.com/Whitewolf14571)
+
+**GitHub:** https://github.com/Whitewolf14571
+
+### LinkedIn
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/pankaj-bisht-a1940a8a/)
+
+**LinkedIn:** https://www.linkedin.com/in/pankaj-bisht-a1940a8a/
+
+## 📚 Project Reference
+
+This repository is based on a DevOps learning/project implementation of a Swiggy Clone application. The implementation and configuration in this repository may be modified and extended as part of my own DevOps practice.
 
 ---
 
-### 📹 Video Link: [**Click Here**](https://youtu.be/x55z7rk0NAU?si=gM1_61wUoq3ChiHD)
+## ⭐ Project Focus
 
-### 📂 Terraform Script Repository: [**Terraform Script for Swiggy Clone App**](https://github.com/KastroVKiran/Terraform-Script-Swiggy-Kastro.git)
+This project provides hands-on practice with:
 
-### 📺 Docker Playlist: [**Watch on YouTube**](https://youtube.com/playlist?list=PLs-PsDpuAuTeNx3OgGQ1QrpNBo-XE6VBh&si=c75uaxvjazr-mIdw)
+* Git & GitHub
+* Jenkins CI/CD
+* Docker
+* Docker Hub
+* Terraform
+* SonarQube
+* OWASP Dependency-Check
+* Trivy
+* DevOps automation
+* Application deployment
 
 ---
 
-## About Me  
-<img src="https://media.licdn.com/dms/image/v2/D5603AQHJB_lF1d9OSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718971147172?e=1733356800&v=beta&t=bz-SXs7FHwIDqQ9xlPibErrGvpHDdAjMJEr9WqHsi9A" alt="Kastro Profile Image" width="150" height="150" style="border-radius:50%;">
-
-**Kastro**    
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kastro-kiran/)  
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/KastroVKiran)  
-
----
-
-## 📢 **Share Your Experience!**
-
-If you've successfully deployed the **Swiggy Clone App** using this project, I'd love to hear about it!  
-- 📹 **Post your deployment video** and **tag me on LinkedIn**: [**Kastro Kiran**](https://www.linkedin.com/in/kastro-kiran/)
-- 💬 **Share your experience** of deploying the app and the tools you used.
-
-> “DevOps is not just a job; it's a journey to continuously improve processes and automate solutions.” – **Kastro**
+> **Continuous improvement, automation, and reliable delivery are at the core of DevOps.**
